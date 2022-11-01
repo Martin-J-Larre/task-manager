@@ -6,9 +6,11 @@ const port = 5000
 // imports
 const routes = require('./routes');
 
+app.use(express.static('public'));
+
 // template engine
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, './public/views'));
+app.set('view engine', 'pug');  
+app.set('views', path.join(__dirname, './views'));
 
 // routes
 app.use('/api/1.0', routes());
