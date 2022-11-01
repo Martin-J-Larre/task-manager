@@ -5,7 +5,7 @@ exports.getOne = (req, res) => {
     res.send('Get One');
 }
 exports.getAll = (req, res) => {
-    res.send('get All');
+    res.render('index')
 }
 exports.updateOne = (req, res) => {
     res.send('Update one');
