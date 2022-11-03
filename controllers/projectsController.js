@@ -5,7 +5,9 @@ exports.getOne = (req, res) => {
     res.send('Get One');
 }
 exports.getAll = (req, res) => {
-    res.render('index')
+    res.render('index', {
+        pageName: 'Projects'
+    })
 }
 exports.updateOne = (req, res) => {
     res.send('Update one');

@@ -1,6 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href="/css/normalize.css", rel="stylesheet")
+        link(href="/css/style.css", rel="stylesheet")
+        
+        title #{ pageName }
+    body 
+        header.bar    
+            h1 Task Manager
+            a(href="#") Close
 
-            
-   
+        main.container
+            aside.container-project
+                .panel
+                    a(href="#").btn New Project 
+                        span +
+                .panel.projects-list 
+                    h2 Projects 
+                    ul#projects.projects
+                        li 
+                            a(href="#") Ecommerce desing 
+                        li 
+                            a(href="#") Web page 
+                        li 
+                            a(href="#") Api construccion 
 
-            
-          
+            block contents
+                    
+                
