@@ -1,3 +1,14 @@
+.input-container {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.input-container label {
+    flex: 0 0 100px;
+    text-align: right;
+    padding-right: 1rem;
+}
+
 .bar {
     background-color: whitesmoke;
     padding: 10px;
@@ -70,6 +81,10 @@
     font-weight: 500;
 }
 
+.btn--form{
+    color: whitesmoke;
+    padding: 10px 20px;
+}
 .panel h2 {
     color: whitesmoke;
     font-weight: 700;
@@ -92,4 +107,71 @@
 
 .projects-list ul li a:hover {
     color: #4d4d4d;
+}
+
+.new-project-container {
+    flex: 1;
+    padding: 1rem;
+    overflow: scroll;
+}
+
+.new-project-container h1,
+.new-project-container h2 {
+    text-align: center;
+}
+
+.new-project-container h1 {
+    font-size: 1.5rem;
+}
+
+.new-project-container h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+.new-project-container h1 span {
+    font-weight: 400;
+}
+
+form.create-project {
+    max-width: 800px;
+    width: 90%;
+    background-color: #1e1e1e;
+    margin: 0 auto;
+    padding: 2rem 2rem 1rem 2rem;
+    color: whitesmoke;
+    transition: background-color .5s ease-in-out;
+}
+
+form.create-project label,
+form.create-project input {
+    display: block;
+}
+
+form.create-project label {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+form.create-project input[type="text"]{
+    width: 100%;
+    height: 2rem;
+    padding-left: 1rem;
+    border: 1px solid #455A64;
+    border-radius: 5rem;
+    color: black;
+}
+
+form input[type="submit"]{
+    margin: 10px 0 0 0;
+    text-align: center;
+    background-color: #4d4d4d ;
+    border: none;
+    padding: 10px 20px;
+    color: whitesmoke;
+    border-radius: 5rem;
+}
+
+.send {
+    justify-content: flex-end;
 }

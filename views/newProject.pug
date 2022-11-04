@@ -1,0 +1,12 @@
+extends layout
+
+block contents
+    .new-project-container
+        h1 #{ pageName }
+
+        form.create-project
+            .input-container
+                label(for="name") Project Name 
+                input(type="text" id="name" name="name")
+            .input-container.send 
+                input(type="submit" value="ADD")
