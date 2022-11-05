@@ -4,7 +4,7 @@ block contents
     .new-project-container
         h1 #{ pageName }
 
-        form.create-project
+        form.create-project(action="/new-project" method="POST")
             .input-container
                 label(for="name") Project Name 
                 input(type="text" id="name" name="name")

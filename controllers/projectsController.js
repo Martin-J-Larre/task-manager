@@ -26,3 +26,6 @@ exports.newProject = (req, res) => {
         pageName: 'New Project'
     })
 }
+exports.createNewProject = (req, res) => {
+    console.log(req.body);
+}

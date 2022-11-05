@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express();
 const path = require('path');
+const bodyParser = require('body-parser');
 const port = 5000
 
 // imports
@@ -12,8 +13,11 @@ app.use(express.static('public'));
 app.set('view engine', 'pug');  
 app.set('views', path.join(__dirname, './views'));
 
+//middlewares
+app.use(bodyParser.urlencoded({extended: true}));
+
 // routes
-app.use('/api/1.0', routes());
+app.use('/', routes());
 
 
 
