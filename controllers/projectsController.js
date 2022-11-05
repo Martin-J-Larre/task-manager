@@ -27,5 +27,18 @@ exports.newProject = (req, res) => {
     })
 }
 exports.createNewProject = (req, res) => {
-    console.log(req.body);
+    const { name } = req.body;
+
+    let errors = [];
+
+    if (!name) {
+        errors.push({'text': 'Add a name to the project'})
+    }
+
+    if (errors.length > 0) {
+        res.render("newProject", {
+            pageName: 'New Project',
+            errors
+        })
+    }
 }

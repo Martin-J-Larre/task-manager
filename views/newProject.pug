@@ -4,6 +4,10 @@ block contents
     .new-project-container
         h1 #{ pageName }
 
+        if errors 
+            each error in errors
+                .alert= error.text
+
         form.create-project(action="/new-project" method="POST")
             .input-container
                 label(for="name") Project Name 
