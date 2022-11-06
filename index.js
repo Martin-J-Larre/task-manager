@@ -5,8 +5,12 @@ const bodyParser = require('body-parser');
 require('dotenv').config()
 const port = 5000
 
+// DB
+const db = require('./config/db');
+db.sequelize.sync();
+
+
 // imports
-const { sequelize, connectDB } = require('./config/db');
 const routes = require('./routes');
 
 app.use(express.static('public'));
@@ -23,7 +27,6 @@ app.use('/', routes());
 
 
 
-app.listen(port, async () => {
+app.listen(port, () => {
   console.log(`Server is listening on port http://localhost:${port}`);
-  await connectDB();
 });
