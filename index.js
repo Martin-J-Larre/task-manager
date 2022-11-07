@@ -6,8 +6,13 @@ require('dotenv').config()
 const port = 5000
 
 // DB
-const db = require('./config/db');
-db.sequelize.sync();
+const sequelize = require('./config/db');
+require('./models/Projects');
+
+sequelize.sync()
+    .then(()=> console.log("***** Database Conected ******"))
+    .catch(err => console.log(err));
+  
 
 
 // imports
