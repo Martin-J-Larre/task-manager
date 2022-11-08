@@ -5,6 +5,8 @@
 - NodeJS
 - Express
 - Pug
+- Sequelize
+- MySql
 
 
 ## Demo

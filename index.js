@@ -10,8 +10,8 @@ const sequelize = require('./config/db');
 require('./models/Projects');
 
 sequelize.sync()
-    .then(()=> console.log("***** Database Conected ******"))
-    .catch(err => console.log(err));
+    .then(()=> console.log("*** Database Conected ***"))
+    .catch(err => console.log("=== Database not Connected ===", err));
   
 
 
