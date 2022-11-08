@@ -21,12 +21,10 @@ html(lang="en")
                 .panel.projects-list 
                     h2 Projects 
                     ul#projects.projects
-                        li 
-                            a(href="#") Ecommerce desing 
-                        li 
-                            a(href="#") Web page 
-                        li 
-                            a(href="#") Api construccion 
+                        if projectList.length
+                            each project in projectList
+                                li
+                                    a(href="#")= project.name
 
             block contents
                     

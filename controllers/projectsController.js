@@ -1,9 +1,11 @@
 const Projects = require('../models/Projects');
-const slug = require('slug');
 
-exports.projectHome = (req, res) => {
+
+exports.projectHome = async (req, res) => {
+    const projectList = await Projects.findAll();
     res.render('index', {
-        pageName: 'Projects'
+        pageName: 'Projects',
+        projectList
     })
 }
 
@@ -28,8 +30,8 @@ exports.createNewProject = async (req, res) => {
             errors
         });
     } else {
-        const url = slug(name).toLocaleLowerCase();
-        const project = await Projects.create({ name, url });
+        
+        const project = await Projects.create({ name });
         res.redirect('/');
     }
 }
