@@ -2,6 +2,8 @@ extends layout
 
 block content
     .new-project-container
-        h1 #{ pageName }
-
-        
+        h1 #{ pageName } - #{ project.name }
+        pre= vardump(project)
+        .btn-container
+            a(href=`/project/${ project.id }` class="btn") Edith Project
+            button#delete-project(type="button" class="btn delete") Delete Project

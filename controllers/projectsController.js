@@ -57,3 +57,19 @@ exports.getProjectByUrl = async (req, res, next) => {
         projectList
     })
 }
+exports.edithProject = async (req, res) => {
+    const projectList = await Projects.findAll();
+
+    const { id } = req.params;
+
+    const project = await Projects.findOne({ where: { id } });
+
+    res.render("newProject", {
+        pageName: "Edith Project",
+        projectList,
+        project
+
+    })
+}
+
+// Consultas/Promises

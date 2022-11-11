@@ -1,16 +1,15 @@
 extends layout
 
+include ./mixins/createProject
+
 block content
     .new-project-container
         h1 #{ pageName }
 
+        pre=vardump(project)
+
         if errors 
             each error in errors
                 .alert= error.text
+        +createProject(project)
 
-        form.create-project(action="/new-project" method="POST")
-            .input-container
-                label(for="name") Project Name 
-                input(type="text" id="name" name="name")
-            .input-container.send 
-                input(type="submit" value="ADD")

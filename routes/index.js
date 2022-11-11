@@ -8,5 +8,6 @@ module.exports = function() {
     router.get('/new-project', projectsController.newProject);
     router.post('/new-project', body('name').not().isEmpty().trim().escape(), projectsController.createNewProject);
     router.get('/projects/:url', projectsController.getProjectByUrl);    
+    router.get('/project/:id', projectsController.edithProject);    
     return router;
 }
